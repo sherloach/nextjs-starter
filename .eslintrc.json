@@ -1,3 +1,40 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "next",
+    "prettier",
+    "eslint:recommended",
+    "plugin:tailwindcss/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "simple-import-sort",
+    "import",
+    "tailwindcss"
+  ],
+  "rules": {
+    "no-console": "warn",
+    "no-param-reassign": "off",
+
+    // Typescript
+    "@typescript-eslint/no-unused-vars": "error",
+
+    // Import/export sorting
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "import/extensions": "off"
+  },
+  "globals": {
+    "React": true,
+    "JSX": true
+  }
 }
